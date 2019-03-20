@@ -1,0 +1,35 @@
+#!usr/bin/bash!
+
+n = int(raw_input())
+#def fib():
+#    if  n == 0 :
+#        return 0
+#    if n == 1 or n == 2:
+#        return 1
+#    if n > 2:
+#        fib = [1,1]
+#        counter = 2
+#        while counter != n:
+#            fib.append(fib[counter -1] + fib[counter-2])
+#            counter = counter + 1
+#        return fib[n-1]
+
+def fibt():
+    if n == 0:
+        return 0
+    if n == 1 or n == 2:
+        return 1
+    if n > 2:
+        fone = 0
+        ftwo = 1
+        counter = 1
+        while counter != n:
+            fibtwo = fone + ftwo
+            fone = ftwo
+            ftwo = fibtwo
+            counter = counter + 1
+        return fibtwo
+
+print(fibt())
+
+

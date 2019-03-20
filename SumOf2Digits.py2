@@ -1,0 +1,10 @@
+#!/usr/bin/bash
+
+def sumof():
+    i,j = raw_input().split()
+    i = int(i)
+    j = int(j)
+    sum = i + j
+    return sum
+
+print(sumof())

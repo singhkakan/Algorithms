@@ -1,0 +1,15 @@
+#!/usr/bin/bash
+
+def max_pairwise():
+    n = int(raw_input())
+    l = [None] * n
+    l = raw_input().split()
+    if len(l) > n or len(l) < n:
+        raise Exception('Incorrect length')
+    
+    sort_l = sorted(l, key=int)
+    max_pro = int(sort_l[len(sort_l) - 1]) * int(sort_l[len(sort_l) - 2])
+    return(max_pro)
+
+print(max_pairwise())
+

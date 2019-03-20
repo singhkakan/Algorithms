@@ -1,0 +1,27 @@
+#!usr/bin/bash!
+
+n = int(raw_input())
+def fib():
+    if n == 0:
+        return 0
+    if n < 3:
+        return 1
+    if n > 2:
+        fib = [1,1]
+        counter = 2
+        while counter != n:
+            fib.append((fib[counter -1] + fib[counter-2]) % 10)
+            counter = counter + 1
+        return fib[n-1]
+
+#        print fib[n-1]
+#    return str(fib[n-1])[len(str(fib[n-1])) -1]
+#    for i in str(fib[n-1]):
+#        last = i
+#    return last
+#    fi = [int(d) for d in str(fib[n-1])]
+#    return fi[len(fi)-1]    
+
+print(fib())
+
+
